@@ -1,6 +1,3 @@
-import './global.css';
-import styles from './App.module.css';
-
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Post } from './components/Post';
@@ -15,7 +12,7 @@ const posts = [
     },
     content: [
       { tag: 'p', content: 'Fala galeraa 👋' },
-      { tag: 'p', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { tag: 'p', content: 'Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
       { tag: 'a', content: '👉 jane.design/doctorcare' }
     ],
     publishedAt: new Date('2022-07-11 20:00:30')
@@ -40,13 +37,13 @@ export function App() {
   return (
     <div>
       <Header />
-      <div className={styles.wrapper}>
-        <Sidebar/>
-        <main>
+      <div className="wrapper">
+        <Sidebar />
+        <main className="space-y-5">
           {
             posts.map(post => {
               return (
-                <Post 
+                <Post
                   key={post.id}
                   post={post}
                 />
